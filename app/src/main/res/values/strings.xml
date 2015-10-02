@@ -4,5 +4,9 @@
     <string name="app_name">Memory</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="title_activity_accueil">Accueil</string>
+    <string name="title_activity_mode_solo">ModeSolo</string>
+    <string name="title_activity_mode_multijoueur">ModeMultijoueur</string>
+    <string name="title_activity_regles">Regles</string>
 
 </resources>

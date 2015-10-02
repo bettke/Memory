@@ -1,29 +1,42 @@
 package com.kevinbettencourt.memory;
 
 import android.content.Intent;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 
-public class MainActivity extends ActionBarActivity {
+public class Accueil extends ActionBarActivity {
+
+    Intent intent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        Intent intent = new Intent(MainActivity.this, Accueil.class);
-
-        startActivity(intent);
-        finish();
+        setContentView(R.layout.activity_accueil);
     }
 
+    public void lancerModeSolo(View v){
+        intent = new Intent(Accueil.this, ModeSolo.class);
+        startActivity(intent);
+    }
+
+    public void lancerModeMultijoueur(View v){
+        intent = new Intent(Accueil.this, ModeMultijoueur.class);
+        startActivity(intent);
+    }
+
+    public void afficherRegles(View v){
+        intent = new Intent(Accueil.this, Regles.class);
+        startActivity(intent);
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+        getMenuInflater().inflate(R.menu.menu_accueil, menu);
         return true;
     }
 
